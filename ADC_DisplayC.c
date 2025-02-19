@@ -24,9 +24,9 @@
 
 // Parâmetros do Display
 #define SQUARE_SIZE 8
-#define CENTER_X 60
-#define CENTER_Y 28
-#define SCALE_FACTOR 41  // Valor otimizado
+#define CENTER_X 90
+#define CENTER_Y 60
+#define SCALE_FACTOR 31  // Valor otimizado
 
 // Valores de centro calibrados (ajuste conforme seu joystick)
 #define CENTRO_X_ADC 2065  // Valor central X
@@ -111,7 +111,7 @@ int main() {
 
         // Limites precisos do display
         square_x = (square_x < 0) ? 0 : (square_x > (128 - SQUARE_SIZE)) ? (128 - SQUARE_SIZE) : square_x;
-        square_y = (square_y < 0) ? 0 : (square_y > (64 - SQUARE_SIZE)) ? (64 - SQUARE_SIZE) : square_y;
+        square_y = (square_y < 0) ? 0 : (square_y > (125 - SQUARE_SIZE)) ? (125 - SQUARE_SIZE) : square_y;
         
         // Atualização do display
         draw_interface(&ssd);
